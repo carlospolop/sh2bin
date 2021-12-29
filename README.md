@@ -14,6 +14,6 @@ The new binaries will be located in the `builds/` directory
 
 
 ## Manual steps
-1. Copy your script to this directory
-2. Base64 encode it: `base64 -w0 [/path/to/yourscript.sh] > script.sh.b64` (*The final file must be called "script.sh.b64"*)
-3. Compile the binary: `env GOOS=linux GOARCH=amd64 go build -o builds/sh2bin_$arch`
+1. Clone this repository
+2. Base64 encode the script you want to embed: `base64 -w0 [/path/to/yourscript.sh] > script.sh.b64` (*The final file must be called "script.sh.b64"*)
+3. Build the binary: `env GOOS=linux GOARCH=amd64 go build -o builds/sh2bin_$arch`
