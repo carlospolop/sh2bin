@@ -18,9 +18,9 @@ goos="linux darwin"
 for os in $goos; do
     for arch in $goarchList; do
         echo "Building for $os and $arch (if supported)"
-        env GOOS=$os GOARCH=$arch go build -o builds/sh2bin_$os_$arch 2>/dev/null
-        chmod +x builds/sh2bin_$os_$arch 2>/dev/null
-        ls -l builds/sh2bin_$os_$arch 2>/dev/null
+        env GOOS=$os GOARCH=$arch go build -o builds/sh2bin_${os}_${arch} 2>/dev/null
+        chmod +x builds/sh2bin_${os}_${arch} 2>/dev/null
+        ls -l builds/sh2bin_${os}_${arch} 2>/dev/null
     done
 done
 
